@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Leave Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebeef2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #17a2b8;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #138496;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Vacation Leave Request Form</h2>
+    <form action="/submit-vacation-leave" method="post">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="employee-id">Employee ID</label>
+            <input type="text" id="employee-id" name="employee_id" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" required>
+        </div>
+        <div class="form-group">
+            <label for="start-date">Vacation Start Date</label>
+            <input type="date" id="start-date" name="start_date" required>
+        </div>
+        <div class="form-group">
+            <label for="end-date">Vacation End Date</label>
+            <input type="date" id="end-date" name="end_date" required>
+        </div>
+        <div class="form-group">
+            <label for="notes">Additional Notes (Optional)</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Any additional information"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

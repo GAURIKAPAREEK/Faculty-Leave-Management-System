@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="attendence.css">
+    <script src="attendence.js  " defer></script>  
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Faculty Attendance Dashboard</h1>
+            <div class="controls">
+                <select id="viewType">
+                    <option value="monthly">Monthly View</option>
+                    <option value="weekly">Weekly View</option>
+                </select>
+                <select id="monthSelect"></select>
+                <button onclick="updateAttendance()">Update View</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Working Days</h3>
+                <div class="value" id="workingDays">22</div>
+            </div>
+            <div class="stat-card">
+                <h3>Present Days</h3>
+                <div class="value" id="presentDays">20</div>
+            </div>
+            <div class="stat-card">
+                <h3>Absent Days</h3>
+                <div class="value" id="absentDays">2</div>
+            </div>
+            <div class="stat-card">
+                <h3>Holidays</h3>
+                <div class="value" id="holidayDays">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Attendance Rate</h3>
+                <div class="value" id="attendanceRate">90.9%</div>
+            </div>
+        </div>
+
+        <table class="attendance-table" id="attendanceTable">
+            <thead>
+                <tr id="tableHeader">
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Status</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    
+</body>
+</html>
